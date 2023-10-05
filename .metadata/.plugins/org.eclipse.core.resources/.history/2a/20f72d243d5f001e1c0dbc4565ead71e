@@ -1,0 +1,11 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class TestGUI {
+	public static void main(String[] args) {
+		MyWindow myWD = new MyWindow();
+		myWD.show("FIFA 20", 200, 400, 350, 200);
+	}
+
+}

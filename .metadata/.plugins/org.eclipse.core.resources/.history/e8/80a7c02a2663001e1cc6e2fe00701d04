@@ -1,0 +1,12 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class MyCalculator extends JFrame{
+	public MyCalculator() {
+		this.setTitle("Calculator");
+	}
+	public static void main(String[] args) {
+	     System.out.println("Nguyeenx Thanh Nhaatj");	  
+	}
+}

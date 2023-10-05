@@ -1,0 +1,20 @@
+package view;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class ViDu_FlowLayOut extends JFrame{
+	public ViDu_FlowLayOut()
+	{
+		ImageIcon AnhFiFa = new ImageIcon("C:\\Users\\bluez\\OneDrive\\Pictures\\a662b37b1701adef68baa2fd7eefe394.jpg");
+		this.setTitle("FIFA 15");
+		this.setSize(350, 200);
+		this.setIconImage(AnhFiFa.getImage());
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+	  new ViDu_FlowLayOut();	
+	}
+
+}

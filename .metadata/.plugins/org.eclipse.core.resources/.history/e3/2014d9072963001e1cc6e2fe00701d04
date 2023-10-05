@@ -1,0 +1,22 @@
+package view;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class MyCalculator extends JFrame{
+	public MyCalculator() {
+		ImageIcon icon = new ImageIcon("C:\\Users\\bluez\\OneDrive\\Pictures\\1011863.png");
+		//đặt tiêu đề cho GUI
+		this.setTitle("Calculator");
+		//đặt kích thước cho GUI
+		this.setSize(300,400);
+		this.setIconImage(icon.getImage());
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//cho phép tạo cửa sổ GUI
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+       new MyCalculator();	
+	}
+}

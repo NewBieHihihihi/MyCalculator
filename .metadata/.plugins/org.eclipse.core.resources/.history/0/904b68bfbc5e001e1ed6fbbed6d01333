@@ -1,0 +1,33 @@
+package view;
+
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import java.io.File;
+
+public class ViDu {
+    public static void main(String[] args) {
+        String videogame = "\"C:\\Users\\bluez\\Videos\\Download.mp4\"";
+        Media video = new Media(new File(videogame).toURI().toString());
+        MediaPlayer player = new MediaPlayer(video);
+        MediaView view = new MediaView(player);
+
+        JFrame jf = new JFrame();
+        ImageIcon icon = new ImageIcon("C:\\Users\\bluez\\OneDrive\\Pictures\\a662b37b1701adef68baa2fd7eefe394.jpg");
+
+        jf.setTitle("FIFA 15");
+        jf.setSize(600, 400);
+        jf.setVisible(true);
+        jf.setIconImage(icon.getImage());
+
+        // Thêm JFXPanel để hiển thị video
+        JFXPanel fxPanel = new JFXPanel();
+        jf.add(fxPanel);
+        fxPanel.setScene(new Scene(view));
+        player.play();
+    }
+}

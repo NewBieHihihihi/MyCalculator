@@ -1,0 +1,15 @@
+package view;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class ViDu {
+	public static void main(String[] args) {
+		JFrame jf = new JFrame();
+		ImageIcon icon = new ImageIcon("C:\\Users\\bluez\\OneDrive\\Pictures\\a662b37b1701adef68baa2fd7eefe394.jpg");
+		jf.setTitle("FIFA 15");
+		jf.setSize(600,400);
+		jf.setVisible(true);
+		jf.setIconImage(icon.getImage());
+	}
+}

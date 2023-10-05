@@ -1,0 +1,13 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class ViDu_FlowLayOut extends JFrame{
+	public ViDu_FlowLayOut(String TieuDe)
+	{
+		this.setTitle(TieuDe);
+	}
+	
+	
+
+}

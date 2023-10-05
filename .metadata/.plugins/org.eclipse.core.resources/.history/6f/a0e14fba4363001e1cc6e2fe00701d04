@@ -1,0 +1,85 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.Border;
+
+public class MyCalculator extends JFrame{
+	public MyCalculator() {
+		ImageIcon icon = new ImageIcon("C:\\Users\\bluez\\OneDrive\\Pictures\\1011863.png");
+		//đặt tiêu đề cho GUI
+		this.setTitle("Calculator");
+		//đặt kích thước cho GUI
+		this.setSize(300,400);
+		//Cho icon vào GUI
+		this.setIconImage(icon.getImage());
+		//Cho vị trị cửa sổ GUI ở giữa
+		this.setLocationRelativeTo(null);
+		//Bấm X là dừng chương trình
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//Khung nhập số
+		JTextField field = new JTextField(50);
+		//Tạo khung chứa
+		JPanel text_head = new JPanel();
+		//Bỏ layout vào khung
+		text_head.setLayout(new BorderLayout());
+		//Thêm khung nhập số vào
+		text_head.add(field,BorderLayout.CENTER);
+		
+		
+		JPanel button_calcu = new JPanel();
+		button_calcu.setLayout(new GridLayout(5,3));
+		for(int i = 0; i < 16; i++)
+		{
+			if(i < 10)
+			{
+				JButton button = new JButton(i+"");
+				button_calcu.add(button);
+			}
+			if(i == 11)
+			{
+				JButton button = new JButton("+");
+				button_calcu.add(button); 	
+			}
+			if(i == 12)
+			{
+				JButton button = new JButton("-");
+				button_calcu.add(button);			
+			}
+			if(i == 13)
+			{
+				JButton button = new JButton("*");
+				button_calcu.add(button);
+			}
+			if(i == 14)
+			{
+				JButton button = new JButton("/");
+				button_calcu.add(button);
+			}
+			if(i == 15)
+			{
+				JButton button = new JButton("=");
+			    button_calcu.add(button);
+			}
+		}
+		this.add(text_head,BorderLayout.NORTH);
+		this.add(button_calcu,BorderLayout.CENTER);
+		
+		
+		
+		
+		//cho phép tạo cửa sổ GUI
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+       new MyCalculator();	
+	}
+}

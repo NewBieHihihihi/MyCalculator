@@ -1,0 +1,15 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class MyCalculator extends JFrame{
+	public MyCalculator() {
+		this.setTitle("Calculator");
+		this.setSize(300,200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+	     System.out.println("Nguyeenx Thanh Nhaatj");	  
+	}
+}

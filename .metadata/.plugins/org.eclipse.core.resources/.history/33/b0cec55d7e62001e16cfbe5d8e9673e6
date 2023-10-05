@@ -1,0 +1,17 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class ViDu_FlowLayOut extends JFrame{
+	public ViDu_FlowLayOut()
+	{
+		this.setTitle("FIFA 15");
+		this.setSize(350, 200);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+	  new ViDu_FlowLayOut();	
+	}
+
+}

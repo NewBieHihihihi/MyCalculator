@@ -1,0 +1,46 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.util.List;
+public class Vidu {
+	//method 1
+	public static void buffered()
+	{
+		File p = new File("E:\\GhiFile.txt");
+		try {
+	        BufferedReader br = Files.newBufferedReader(p.toPath(),StandardCharsets.UTF_8);  
+		    String line = null;
+		    while(true)
+		    {
+		    	line = br.readLine();
+		    	if(line == null)
+		    	{
+		    		break;
+		    	}
+		    	else
+		    	System.out.println(line);
+		    }
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		}
+	//method 2
+	public static void docfile_bangFILES()
+	{
+		File f2 = new File("E:\\GhiFile.txt");
+		try {
+			List<String> l = Files.readAllLines(f2.toPath(),StandardCharsets.UTF_8);
+			for (String line : l) {
+				System.out.println(line);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) {
+		//buffered();
+		docfile_bangFILES();
+}
+}

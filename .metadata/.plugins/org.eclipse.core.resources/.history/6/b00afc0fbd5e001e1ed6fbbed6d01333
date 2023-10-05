@@ -1,0 +1,36 @@
+package view;
+
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+
+public class ViDu {
+    public static void main(String[] args) {
+        JFrame jf = new JFrame();
+        jf.setTitle("FIFA 15");
+        jf.setSize(800, 600);
+
+        // Tạo một JFXPanel để chứa video
+        JFXPanel fxPanel = new JFXPanel();
+        jf.add(fxPanel);
+
+        // Tạo một đối tượng MediaPlayer để phát video
+        String videoFile = "path_to_your_video.mp4"; // Thay đổi đường dẫn tới video của bạn
+        Media video = new Media(new File(videoFile).toURI().toString());
+        MediaPlayer player = new MediaPlayer(video);
+
+        // Tạo một MediaView để hiển thị video
+        MediaView view = new MediaView(player);
+        //fxPanel.setScene(new Scene(view));
+
+        // Bắt đầu phát video
+        player.play();
+
+        jf.setVisible(true);
+    }
+}
